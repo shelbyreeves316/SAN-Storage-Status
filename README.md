@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 ## Running
 
-Start the server with:
+Start the server (default port 8100) with:
 
 ```bash
 python app.py --port 8100

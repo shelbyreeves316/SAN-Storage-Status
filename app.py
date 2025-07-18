@@ -70,16 +70,18 @@ def api_status():
     return jsonify(volumes=volumes)
 
 @app.route('/')
+@app.route('/index')
+@app.route('/index.html')
 def index():
-    return send_from_directory(app.static_folder, 'index.html')
+    return app.send_static_file('index.html')
 
 if __name__ == '__main__':
     import os
     import argparse
 
     parser = argparse.ArgumentParser(description='BTRFS status web server')
-    parser.add_argument('--port', type=int, default=int(os.getenv('PORT', 8000)),
-                        help='port to listen on (default: 8000 or $PORT)')
+    parser.add_argument('--port', type=int, default=int(os.getenv('PORT', 8100)),
+                        help='port to listen on (default: 8100 or $PORT)')
     args = parser.parse_args()
 
     app.run(host='0.0.0.0', port=args.port)
