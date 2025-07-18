@@ -17,9 +17,9 @@ pip install -r requirements.txt
 Start the server with:
 
 ```bash
-python app.py
+python app.py --port 8100
 ```
 
-Then open <http://localhost:8000> in your browser.
+Or set the `PORT` environment variable. Then open <http://localhost:8100> in your browser.
 
 The interface displays detected BTRFS volumes, device usage, and SMART status for each drive.

@@ -74,4 +74,12 @@ def index():
     return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    import os
+    import argparse
+
+    parser = argparse.ArgumentParser(description='BTRFS status web server')
+    parser.add_argument('--port', type=int, default=int(os.getenv('PORT', 8000)),
+                        help='port to listen on (default: 8000 or $PORT)')
+    args = parser.parse_args()
+
+    app.run(host='0.0.0.0', port=args.port)
