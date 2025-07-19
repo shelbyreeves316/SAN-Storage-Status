@@ -9,7 +9,7 @@ Install dependencies and run the API:
 
 ```bash
 pip install -r backend/requirements.txt
-uvicorn app.main:app --reload --app-dir backend/app
+uvicorn app.main:app --reload --app-dir backend/app --port 8100
 ```
 
 ## Frontend
