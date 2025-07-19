@@ -14,4 +14,7 @@ async def root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
+    # Run the FastAPI application directly instead of relying on module
+    # string resolution. This avoids import errors when executing the script
+    # with `python backend/app/main.py`.
+    uvicorn.run(app, host="0.0.0.0", port=8100, reload=True)

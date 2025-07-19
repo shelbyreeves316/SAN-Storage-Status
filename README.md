@@ -9,7 +9,8 @@ Install dependencies and run the API:
 
 ```bash
 pip install -r backend/requirements.txt
-uvicorn app.main:app --reload --app-dir backend/app
+# Run from the project root so the `backend` package is on the Python path.
+uvicorn backend.app.main:app --reload --port 8100
 ```
 
 ## Frontend
