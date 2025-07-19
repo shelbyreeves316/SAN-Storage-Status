@@ -1,4 +1,4 @@
-import { Device, Volume } from '../types'
+import { Volume } from '../types'
 import { StatusBadge } from './StatusBadge'
 
 export function VolumeCard({ volume }: { volume: Volume }) {
