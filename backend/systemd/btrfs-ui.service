@@ -1,0 +1,12 @@
+[Unit]
+Description=Btrfs UI API
+After=network.target
+
+[Service]
+User=YOURUSER
+WorkingDirectory=/path/to/backend
+ExecStart=/usr/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
