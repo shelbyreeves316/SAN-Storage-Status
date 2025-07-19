@@ -14,7 +14,14 @@ uvicorn app.main:app --reload --app-dir backend/app
 
 ## Frontend
 
-A React + Vite frontend will live under `frontend/` (placeholder for now).
+The React + Vite frontend is located in `frontend/`. Install dependencies and
+start the dev server with:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
 ## Legacy Flask App
 
